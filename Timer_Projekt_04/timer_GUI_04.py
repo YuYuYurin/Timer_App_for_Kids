@@ -71,7 +71,9 @@ class Timer_GUI:
 
         # Zeichne den zweiten Zeiger, der die vom Benutzer eingegebene Zeit zeigt = Startzeiger
         #if self.stopwatch is not None and self._timer_running:
-        if self._timer_running:
+        if self.stopwatch:
+            logging.debug(f"Stopwatch vorhanden. Timer läuft: {self.stopwatch._timer_running}")
+        if self.stopwatch and self.stopwatch._timer_running:
             logging.debug("update_timer() If_Block")
             remaining_minutes = self.stopwatch.remaining_minutes
             logging.debug(f"update_timer(), Remaining minutes: {remaining_minutes}")

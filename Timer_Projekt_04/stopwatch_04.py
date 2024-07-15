@@ -35,11 +35,11 @@ class Stopwatch:
             # Aktualisiere die verbleibende Zeit
             self.seconds -= 1
             # Berechne die verbleibenden Minuten und Sekunden
-            remaining_minutes = self.seconds // 60
+            self.remaining_minutes = self.seconds // 60
             remaining_seconds = self.seconds % 60
             # Rufe die Callback-Funktion auf, um die verbleibende Zeit an die GUI zurückzugeben
-            self.callback(remaining_minutes, remaining_seconds)
-            logging.debug("Remaining Minutes: {}, Remaining Seconds: {}".format(remaining_minutes,remaining_seconds))
+            self.callback(self.remaining_minutes, remaining_seconds)
+            logging.debug("Remaining Minutes: {}, Remaining Seconds: {}".format(self.remaining_minutes,remaining_seconds))
             # Warte 1 Sekunde, bevor die Methode erneut aufgerufen wird
             time.sleep(1)
 
