@@ -1,4 +1,4 @@
-# Version 04
+# Version 05
 
 ## TODO
 - Anpassung der Logik:
